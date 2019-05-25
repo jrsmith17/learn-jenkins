@@ -3,7 +3,7 @@ node {
         bat 'echo Building....'
     }
     stage('Test') {
-        echo 'Testing....'
+        sh 'echo Testing....'
     }
     stage('Deploy') {
         echo 'Deploying....'
