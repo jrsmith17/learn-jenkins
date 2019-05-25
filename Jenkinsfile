@@ -1,6 +1,6 @@
 node {
     stage('Build') {
-        echo 'Building....'
+        bat 'echo Building....'
     }
     stage('Test') {
         echo 'Testing....'
