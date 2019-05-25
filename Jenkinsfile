@@ -1,11 +1,19 @@
 node {
+	agent {
+		docker ([
+			image: 'rust:latest'
+			args: ''
+		])
+	}
+
+    stage('Checkout') {
+    	steps {
+    		checkout scm
+    	}
+    }
     stage('Build') {
-        bat 'echo Building....'
-    }
-    stage('Test') {
-        sh 'echo Testing....'
-    }
-    stage('Deploy') {
-        echo 'Deploying....'
+        steps {
+        	cargo build
+        }
     }
 }
