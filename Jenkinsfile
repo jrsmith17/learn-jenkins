@@ -2,18 +2,14 @@ node {
 
 
     stage('Checkout') {
-    	steps {
-    		checkout scm
-    	}
+    	checkout scm
     }
     stage('Build') {
-        steps {
-        	if(isUnix()){
-        		echo "hello"
-        	}
-        	else{
-        		echo "goodbye"
-        	}
-        }
+    	if(isUnix()){
+    		echo "hello"
+    	}
+    	else{
+    		echo "goodbye"
+    	}
     }
 }
