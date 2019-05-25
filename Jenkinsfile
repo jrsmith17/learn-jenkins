@@ -1,5 +1,10 @@
 node {
-
+	agent {
+		docker {
+			image 'rust:latest'
+			reuseNode true
+		}
+	}
 
     stage('Checkout') {
     	checkout scm
@@ -11,7 +16,6 @@ node {
     	}
     	else{
     		echo "goodbye"
-    		bat 'C:\\Windows\\System32\\curl.exe --proto \'=https\' --tlsv1.2 -sSf https://sh.rustup.rs | sh'
     	}
     }
 }
