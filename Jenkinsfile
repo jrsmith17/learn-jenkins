@@ -11,7 +11,7 @@ node {
     	}
     	else{
     		echo "goodbye"
-    		curl '--proto \'=https\' --tlsv1.2 -sSf https://sh.rustup.rs | sh'
+    		bat 'C:\\Windows\\System32\\curl.exe --proto \'=https\' --tlsv1.2 -sSf https://sh.rustup.rs | sh'
     	}
     }
 }
