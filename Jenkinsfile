@@ -1,5 +1,11 @@
-node('worker1'){
-	stage('Source'){
-		git 'https://github.com/brentlaster/gradle-greetings.git'
-	}
+node {
+    stage('Build') {
+        echo 'Building....'
+    }
+    stage('Test') {
+        echo 'Testing....'
+    }
+    stage('Deploy') {
+        echo 'Deploying....'
+    }
 }
