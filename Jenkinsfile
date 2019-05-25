@@ -8,8 +8,12 @@ node {
     }
     stage('Build') {
         steps {
-        	curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-        	cargo build
+        	if(isUnix()){
+        		echo "hello"
+        	}
+        	else{
+        		echo "goodbye"
+        	}
         }
     }
 }
