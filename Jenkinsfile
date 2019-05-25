@@ -1,10 +1,5 @@
 node {
-	agent {
-		docker ([
-			image: 'rust:latest',
-			args: ''
-		])
-	}
+
 
     stage('Checkout') {
     	steps {
