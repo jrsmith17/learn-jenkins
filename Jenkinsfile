@@ -13,6 +13,6 @@ node {
     }
 
     stage('Docker') {
-    	docker build -t test .
+    	//docker build -t test .
     }
 }
