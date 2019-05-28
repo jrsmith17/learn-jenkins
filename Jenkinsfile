@@ -1,12 +1,5 @@
 node {
-	agent {
-		docker {
-			image 'rust:latest'
-			reuseNode true
-		}
-	}
-
-    stage('Checkout') {
+	stage('Checkout') {
     	checkout scm
     }
     
@@ -17,5 +10,9 @@ node {
     	else{
     		echo "goodbye"
     	}
+    }
+
+    stage('Docker') {
+    	docker build -t test .
     }
 }
