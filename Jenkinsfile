@@ -13,6 +13,11 @@ node {
     }
 
     stage('Docker') {
-    	//docker build -t test .
+    	if(isUnix()){
+    		sh 'docker build -t test .'
+    	}
+    	else{
+    		bat 'docker build -t test .'
+    	}
     }
 }
